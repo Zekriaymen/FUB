@@ -6,7 +6,7 @@ export default function Home() {
       <script
         type="text/javascript"
         src="https://eia.followupboss.com/embeddedApps-v1.0.1.js"
-        async
+        defer
       ></script>
       <ReferenceForm />
     </div>
