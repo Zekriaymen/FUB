@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
-
+export interface LeadEmail {
+  id: number;
+  value: string;
+}
 export async function POST(req: Request) {
   const { leadId } = await req.json();
 
@@ -34,7 +37,8 @@ export async function POST(req: Request) {
     person: {
       firstName: lead.firstName + "copy",
       lastName: lead.lastName + "copy",
-      emails: lead.emails.map((el) => {
+
+      emails: lead.emails.map((el: LeadEmail) => {
         {
           return {
             ...el,

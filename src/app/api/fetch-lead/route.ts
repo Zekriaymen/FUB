@@ -10,7 +10,8 @@ function isFromFollowUpBoss(context: string, signature: string) {
 }
 
 export async function POST(req: Request) {
-  const { context, signature, personId } = await req.json();
+  // return personId
+  const { context, signature } = await req.json();
   if (!isFromFollowUpBoss(context, signature)) {
     return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
   }
