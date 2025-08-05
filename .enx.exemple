@@ -1,0 +1,6 @@
+# Follow Up Boss API Keys
+FUB_COMPANY1_API_KEY=
+FUB_COMPANY2_API_KEY=
+
+# Your app secret (for validating signature from embedded app)
+FUB_EMBEDDED_APP_SECRET=

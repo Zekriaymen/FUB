@@ -47,7 +47,7 @@ COPY --from=build /app/public ./public
 COPY --from=build /app/.next/static ./.next/static
 
 # Copy the next.config.ts
-COPY next.config.js .
+COPY next.config.ts .
 
 ENV NODE_ENV=production
 
