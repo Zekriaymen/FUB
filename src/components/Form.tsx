@@ -18,8 +18,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChevronDown } from "lucide-react";
 
 const formSchema = z.object({
   clientType: z.string().min(1, {

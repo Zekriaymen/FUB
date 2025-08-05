@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs
+*.log
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+.env
+
+# Next.js build output
+.next
+
+# VS Code directories
+.vscode/
+.history/
+
+# MacOS files
+.DS_Store
