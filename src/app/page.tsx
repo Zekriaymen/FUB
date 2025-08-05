@@ -3,7 +3,7 @@ import Script from "next/script";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div className="h-full bg-gray-50 flex items-center justify-center ">
       <Script
         src="https://eia.followupboss.com/embeddedApps-v1.0.1.js"
         strategy="beforeInteractive"
