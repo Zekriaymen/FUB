@@ -68,8 +68,8 @@ export default function ReferenceForm() {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto">
-      <CardContent className="space-y-4">
+    <div className="w-full bg-white py-6 max-w-md mx-auto">
+      <div className="px-2">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             {/* Types de référence client */}
@@ -173,7 +173,7 @@ export default function ReferenceForm() {
             </Button>
           </form>
         </Form>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }
