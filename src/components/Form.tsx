@@ -68,102 +68,112 @@ export default function ReferenceForm() {
   }
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        {/* Types de référence client */}
-        <FormField
-          control={form.control}
-          name="clientType"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <SelectTrigger className="w-full h-12 border-gray-300 focus:border-blue-500">
-                    <SelectValue placeholder="Types de référence client" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="nouveau">Nouveau client</SelectItem>
-                    <SelectItem value="existant">Client existant</SelectItem>
-                    <SelectItem value="prospect">Prospect</SelectItem>
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage className="text-red-500 text-xs" />
-            </FormItem>
-          )}
-        />
+    <Card className="w-full max-w-md mx-auto">
+      <CardContent className="space-y-4">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            {/* Types de référence client */}
+            <FormField
+              control={form.control}
+              name="clientType"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <SelectTrigger className="w-full h-12 border-gray-300 focus:border-blue-500">
+                        <SelectValue placeholder="Types de référence client" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="nouveau">Nouveau client</SelectItem>
+                        <SelectItem value="existant">
+                          Client existant
+                        </SelectItem>
+                        <SelectItem value="prospect">Prospect</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </FormControl>
+                  <FormMessage className="text-red-500 text-xs" />
+                </FormItem>
+              )}
+            />
 
-        {/* Refinancement */}
-        <FormField
-          control={form.control}
-          name="refinancing"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <SelectTrigger className="w-full h-12 border-gray-300 focus:border-blue-500">
-                    <SelectValue placeholder="Refinancement" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="oui">Oui</SelectItem>
-                    <SelectItem value="non">Non</SelectItem>
-                    <SelectItem value="en-cours">
-                      {"En cours d'évaluation"}
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage className="text-red-500 text-xs" />
-            </FormItem>
-          )}
-        />
+            {/* Refinancement */}
+            <FormField
+              control={form.control}
+              name="refinancing"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <SelectTrigger className="w-full h-12 border-gray-300 focus:border-blue-500">
+                        <SelectValue placeholder="Refinancement" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="oui">Oui</SelectItem>
+                        <SelectItem value="non">Non</SelectItem>
+                        <SelectItem value="en-cours">
+                          {"En cours d'évaluation"}
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </FormControl>
+                  <FormMessage className="text-red-500 text-xs" />
+                </FormItem>
+              )}
+            />
 
-        {/* Agent de crédit */}
-        <FormField
-          control={form.control}
-          name="creditAgent"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <SelectTrigger className="w-full h-12 border-gray-300 focus:border-blue-500">
-                    <SelectValue placeholder="Agent de crédit" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="marie-dupont">Marie Dupont</SelectItem>
-                    <SelectItem value="jean-martin">Jean Martin</SelectItem>
-                    <SelectItem value="sophie-bernard">
-                      Sophie Bernard
-                    </SelectItem>
-                    <SelectItem value="pierre-durand">Pierre Durand</SelectItem>
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage className="text-red-500 text-xs" />
-            </FormItem>
-          )}
-        />
+            {/* Agent de crédit */}
+            <FormField
+              control={form.control}
+              name="creditAgent"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <SelectTrigger className="w-full h-12 border-gray-300 focus:border-blue-500">
+                        <SelectValue placeholder="Agent de crédit" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="marie-dupont">
+                          Marie Dupont
+                        </SelectItem>
+                        <SelectItem value="jean-martin">Jean Martin</SelectItem>
+                        <SelectItem value="sophie-bernard">
+                          Sophie Bernard
+                        </SelectItem>
+                        <SelectItem value="pierre-durand">
+                          Pierre Durand
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </FormControl>
+                  <FormMessage className="text-red-500 text-xs" />
+                </FormItem>
+              )}
+            />
 
-        {/* Submit Button */}
-        <Button
-          type="submit"
-          className="w-full h-12 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg mt-6"
-          disabled={form.formState.isSubmitting}
-        >
-          {form.formState.isSubmitting
-            ? "Envoi en cours..."
-            : "Envoyer une référence"}
-        </Button>
-      </form>
-    </Form>
+            {/* Submit Button */}
+            <Button
+              type="submit"
+              className="w-full h-12 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg mt-6"
+              disabled={form.formState.isSubmitting}
+            >
+              {form.formState.isSubmitting
+                ? "Envoi en cours..."
+                : "Envoyer une référence"}
+            </Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
   );
 }
